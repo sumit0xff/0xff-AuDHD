@@ -1,99 +1,198 @@
+```text
+ ██████╗ ██╗  ██╗███████╗███████╗
+██╔═████╗╚██╗██╔╝██╔════╝██╔════╝
+██║██╔██║ ╚███╔╝ █████╗  █████╗
+████╔╝██║ ██╔██╗ ██╔══╝  ██╔══╝
+╚██████╔╝██╔╝ ██╗██║     ██║
+ ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝
+```
+
 # 0xff-AuDHD
 
-[![Status](https://img.shields.io/badge/status-early__development-yellow)](#)
-[![Version](https://img.shields.io/badge/version-0.1.0-blue)](#)
-[![License](https://img.shields.io/badge/license-placeholder-lightgrey)](#)
+**AI Engineering Operating System**
 
-0xff-AuDHD is an AI Engineering Operating System for developers who value clarity, focus, and production-quality software.
+Engineering principles, decision frameworks, and behavioral rules that teach AI assistants to collaborate like experienced software engineers.
+
+- Status: Active Development
+- Version: v0.1.0
+- License: MIT
+
+[![Release](https://img.shields.io/github/v/tag/sumit0xff/0xff-AuDHD?label=release)](https://github.com/sumit0xff/0xff-AuDHD/tags)
+[![License](https://img.shields.io/github/license/sumit0xff/0xff-AuDHD)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/sumit0xff/0xff-AuDHD?style=flat)](https://github.com/sumit0xff/0xff-AuDHD/stargazers)
+[![Forks](https://img.shields.io/github/forks/sumit0xff/0xff-AuDHD?style=flat)](https://github.com/sumit0xff/0xff-AuDHD/forks)
+[![Issues](https://img.shields.io/github/issues/sumit0xff/0xff-AuDHD)](https://github.com/sumit0xff/0xff-AuDHD/issues)
+[![Last Commit](https://img.shields.io/github/last-commit/sumit0xff/0xff-AuDHD)](https://github.com/sumit0xff/0xff-AuDHD/commits/main)
+
+---
 
 ## Why This Project Exists
 
-AI assistants can help move projects forward, but only when they respect the developer as the project owner, existing code, and the real needs of the project. 0xff-AuDHD provides a shared set of engineering behaviors for AI assistants across platforms.
+AI assistants often overengineer simple work, change code before understanding it, or take control away from the developer. 0xff-AuDHD gives them a practical engineering standard: understand first, keep changes focused, and prefer simple solutions with clear value.
 
-## Features
+## Who Is This For?
 
-- Developer-first engineering behavior.
-- Decision rules that prefer simplicity and clear value.
-- Production-quality coding and communication guidance.
-- Platform-neutral behavior for major AI assistants.
+- Developers
+- Students
+- Open source contributors
+- Freelancers
+- Anyone tired of AI overengineering simple problems
 
-## Design Principles
+---
 
-- Understand before changing.
-- Minimize unnecessary complexity.
-- Earn complexity through real project needs.
-- Teach while building.
+## What Is 0xff-AuDHD?
 
-See [Philosophy](docs/philosophy.md) for the complete principles.
+0xff-AuDHD helps you give an AI assistant a consistent way to approach engineering work.
 
-## Why Not Just Use a Prompt?
+An **AI Engineering Operating System** is a shared set of rules for how an AI should plan, change, explain, and review software. It keeps the developer as the project owner and the AI as a collaborator.
 
-0xff-AuDHD is not a prompt or a personality. It is a set of engineering principles, decision frameworks, and behavioral rules that guide AI collaboration.
+---
 
-## Project Status
+## Quick Start (5 Minutes)
 
-Early Development. The v0.1.0 foundation establishes the project philosophy and initial behavior specification.
+### 1. Clone the repository
 
-## Installation
+**Why:** This downloads 0xff-AuDHD to your computer.
 
-1. Clone this repository.
-2. Read [SKILL.md](SKILL.md).
-3. Apply the skill in your supported AI assistant.
+```bash
+git clone https://github.com/sumit0xff/0xff-AuDHD.git
+cd 0xff-AuDHD
+```
+
+### 2. Read the skill
+
+**Why:** `SKILL.md` defines the engineering behavior for your AI assistant.
+
+```bash
+cat SKILL.md
+```
+
+### 3. Use the skill with your AI assistant
+
+**Why:** Provide the skill and relevant project context before requesting work.
+
+See the platform-neutral [Usage Guide](docs/usage.md).
+
+---
 
 ## Supported AI Platforms
 
-- ChatGPT
-- Claude
-- Codex
-- Cursor
-- Gemini
-- Antigravity
+| Platform | Status |
+| --- | --- |
+| ChatGPT | Supported |
+| Claude | Supported |
+| Codex | Supported |
+| Cursor | Supported |
+| Gemini | Supported |
+| Antigravity | Supported |
 
-See [Usage](docs/usage.md) for the shared workflow.
+Platform integrations may differ, but the engineering philosophy remains the same.
+
+---
 
 ## Repository Structure
 
-```text
-0xff-AuDHD/
-├── README.md
-├── LICENSE
-├── CONTRIBUTING.md
-├── CHANGELOG.md
-├── SKILL.md
-├── docs/
-│   ├── philosophy.md
-│   ├── installation.md
-│   ├── roadmap.md
-│   └── usage.md
-├── rules/
-├── examples/
-├── tests/
-├── integrations/
-│   ├── chatgpt/
-│   ├── claude/
-│   ├── codex/
-│   ├── cursor/
-│   ├── gemini/
-│   └── antigravity/
-└── .github/
-```
+| Path | Responsibility |
+| --- | --- |
+| `SKILL.md` | Executable behavior specification for AI assistants. |
+| `docs/` | Philosophy, usage, installation, and roadmap documentation. |
+| `rules/` | Rules that support the philosophy and skill. |
+| `examples/` | Focused examples of applying 0xff-AuDHD. |
+| `tests/` | Validation artifacts for documented behavior. |
+| `integrations/` | Materials for supported AI platforms. |
+| `.github/` | GitHub-specific repository configuration. |
+| `CONTRIBUTING.md` | Contribution requirements and standards. |
+| `CHANGELOG.md` | Version history. |
+
+---
+
+## Core Philosophy
+
+The philosophy is the foundation of every behavior in this repository. Read the complete [Philosophy](docs/philosophy.md).
+
+<details>
+<summary>View the four laws</summary>
+
+1. **Understand Before Changing** — Understand the existing implementation before changing it.
+2. **Minimize Unnecessary Complexity** — Prefer simple solutions with clear value.
+3. **Complexity Must Be Earned** — Add complexity only when the software truly requires it.
+4. **Teach Through Building** — Teach while solving the current problem.
+
+</details>
+
+---
+
+## Before / After
+
+**Task:** Add email validation to an existing signup form.
+
+### Typical AI response
+
+> “I’ll add a validation service, shared schema layer, reusable form hooks, and several new files.”
+
+### 0xff-AuDHD response
+
+> “I’ll inspect the existing signup validation first. If a suitable function exists, I’ll add the smallest email check there, test the form, and only extract shared code if it is needed.”
+
+---
 
 ## Roadmap
 
-See [Roadmap](docs/roadmap.md).
+| Version | Focus | Status |
+| --- | --- | --- |
+| v0.1 | Foundation: philosophy, SKILL, and documentation | Complete |
+| v0.2 | Decision Engine, AI Smells, Context Detection, and Framework Rules | Planned |
+| v0.3 | Integrations, benchmarks, validation, and community contributions | Planned |
 
-## Future Vision
+---
 
-Maintain a single source of truth for consistent AI engineering behavior across current and future AI systems.
+## FAQ
+
+<details>
+<summary>Is this a prompt?</summary>
+
+No. It is a set of engineering principles, decision frameworks, and behavioral rules.
+
+</details>
+
+<details>
+<summary>Is this only for AuDHD?</summary>
+
+No. It is designed for developers using the supported AI platforms.
+
+</details>
+
+<details>
+<summary>Can I use it with ChatGPT?</summary>
+
+Yes. Follow the shared workflow in the [Usage Guide](docs/usage.md).
+
+</details>
+
+<details>
+<summary>Can I contribute?</summary>
+
+Yes. Read [CONTRIBUTING.md](CONTRIBUTING.md) before contributing.
+
+</details>
+
+<details>
+<summary>Why is it open source?</summary>
+
+The project is public so its philosophy, rules, and direction can be inspected and improved through contributions.
+
+</details>
+
+---
 
 ## Contributing
 
-See [Contributing](CONTRIBUTING.md).
-
-## Changelog
-
-See [Changelog](CHANGELOG.md).
+Read [CONTRIBUTING.md](CONTRIBUTING.md) before contributing.
 
 ## License
 
-See [LICENSE](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+Built for developers who value clarity over complexity.
