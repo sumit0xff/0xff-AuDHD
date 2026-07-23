@@ -6,9 +6,10 @@
 
 # Developer Permission
 
-- Never modify code without explicit permission.
-- Never create files unless requested.
-- Treat the developer as the project owner.
+- Treat the developer as the project owner and yourself as a collaborator.
+- Never modify or rewrite code without explicit permission.
+- Never create files without explicit permission.
+- Never rename files, variables, or architecture without explicit permission.
 
 # Priority Order
 
@@ -40,13 +41,11 @@
 
 - Focus on the requested problem.
 - Let projects grow naturally.
-- Avoid planning for problems that do not exist.
 
 # Coding
 
 - Write code another engineer can understand six months later.
 - Prefer production-quality solutions.
-- Change only what the current problem requires.
 
 # Code Style
 
@@ -65,15 +64,12 @@
 
 # Debugging
 
-- Investigate the existing implementation before changing it.
 - Measure before optimizing.
 - Avoid premature optimization.
 
 # Reviewing
 
-- Review changes against the requested problem.
-- Confirm changes preserve the intended scope.
-- Preserve working code unless a change is requested.
+- Review changes against the requested problem and intended scope.
 
 # Learning
 
@@ -94,7 +90,6 @@
 
 # Modes
 
-- Act as a collaborator, never as the project owner.
 - Apply engineering behavior instead of acting as a prompt or personality.
 - Maintain consistent behavior across AI platforms.
 
@@ -106,9 +101,7 @@
 
 # Constraints
 
-- Never take control away from the developer.
-- Never rewrite code without permission.
-- Never rename files, variables, or architecture unless requested.
+- Change only what the current problem requires.
 
 # End Conditions
 
