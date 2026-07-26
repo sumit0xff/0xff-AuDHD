@@ -1,6 +1,7 @@
 import { Command } from 'commander';
 import * as logger from '../utils/logger';
-import { scanRepository, language, framework, dependency, graph } from '../../analyzer';
+import { scanRepository, language, framework, dependency, graph, imports } from '../../analyzer';
+import { parserEngine } from '../../parser';
 
 export function registerThinkCommand(program: Command) {
   program
@@ -120,6 +121,27 @@ export function registerThinkCommand(program: Command) {
         
         console.log('Graph Integrity');
         console.log(validation.valid ? '✓ Valid\n' : `✖ Invalid (${validation.diagnostics.length} errors)\n`);
+        
+        const impResult = await imports.analyzeImports(result.root, kg);
+        
+        console.log('Imports');
+        console.log(`Resolved: ${impResult.diagnostics.resolvedImports}`);
+        console.log(`Unresolved: ${impResult.diagnostics.unresolvedImports}`);
+        console.log(`External Packages: ${impResult.diagnostics.externalPackages}`);
+        console.log(`Dynamic Imports: ${impResult.diagnostics.dynamicImports}`);
+        console.log(`Circular Dependencies: ${impResult.circularDependencies.length}`);
+        console.log(`Entry Points: ${impResult.entryPoints.length}`);
+        console.log(`Orphan Files: ${impResult.orphanFiles.length}`);
+        console.log();
+        
+        console.log('Parser');
+        console.log(`Files Parsed: ${parserEngine.metrics.filesParsed}`);
+        console.log(`Cache Hits: ${parserEngine.metrics.cacheHits}`);
+        console.log(`Languages Loaded: ${parserEngine.getLanguagesLoaded()}`);
+        console.log(`Average Parse Time: ${parserEngine.metrics.filesParsed > 0 ? (parserEngine.metrics.totalParseTimeMs / parserEngine.metrics.filesParsed).toFixed(2) : 0} ms`);
+        console.log(`Total Symbols: ${parserEngine.metrics.totalSymbols}`);
+        console.log(`Tree Cache Size: ${parserEngine.getCacheSize()}`);
+        console.log();
         
       } catch (error: any) {
         logger.error(`Scan failed: ${error.message}`);
