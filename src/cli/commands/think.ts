@@ -1,6 +1,6 @@
 import { Command } from 'commander';
 import * as logger from '../utils/logger';
-import { scanRepository, language, framework, dependency } from '../../analyzer';
+import { scanRepository, language, framework, dependency, graph } from '../../analyzer';
 
 export function registerThinkCommand(program: Command) {
   program
@@ -105,6 +105,21 @@ export function registerThinkCommand(program: Command) {
         
         console.log('Total Packages');
         console.log(`${depResult.totalDependencies}\n`);
+        
+        const kg = graph.buildKnowledgeGraph(result, langResult, fwResult, depResult);
+        const stats = graph.calculateStatistics(kg);
+        const validation = graph.validateGraph(kg);
+        
+        console.log('Repository Graph');
+        console.log(`Nodes: ${stats.nodeCount}`);
+        console.log(`Edges: ${stats.edgeCount}`);
+        console.log(`Languages: ${stats.languages}`);
+        console.log(`Technologies: ${stats.technologies}`);
+        console.log(`Packages: ${stats.packages}`);
+        console.log();
+        
+        console.log('Graph Integrity');
+        console.log(validation.valid ? '✓ Valid\n' : `✖ Invalid (${validation.diagnostics.length} errors)\n`);
         
       } catch (error: any) {
         logger.error(`Scan failed: ${error.message}`);

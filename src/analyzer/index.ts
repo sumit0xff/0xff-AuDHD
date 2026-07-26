@@ -6,3 +6,4 @@ export * from './repository';
 export * as language from './language';
 export * as framework from './framework';
 export * as dependency from './dependency';
+export * as graph from './graph';
