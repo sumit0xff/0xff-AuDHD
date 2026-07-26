@@ -1,0 +1,37 @@
+{
+  "name": "0xff-audhd",
+  "version": "1.0.0",
+  "description": "```text  ██████╗ ██╗  ██╗███████╗███████╗ ██╔═████╗╚██╗██╔╝██╔════╝██╔════╝ ██║██╔██║ ╚███╔╝ █████╗  █████╗ ████╔╝██║ ██╔██╗ ██╔══╝  ██╔══╝ ╚██████╔╝██╔╝ ██╗██║     ██║  ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝ ```",
+  "main": "dist/cli/index.js",
+  "bin": {
+    "0xff": "./bin/0xff.js"
+  },
+  "directories": {
+    "doc": "docs",
+    "example": "examples",
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./bin/0xff.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumit0xff/0xff-AuDHD.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sumit0xff/0xff-AuDHD/issues"
+  },
+  "homepage": "https://github.com/sumit0xff/0xff-AuDHD#readme",
+  "dependencies": {
+    "@types/node": "^26.1.1",
+    "chalk": "^4.1.2",
+    "commander": "^15.0.0",
+    "typescript": "^7.0.2"
+  }
+}
