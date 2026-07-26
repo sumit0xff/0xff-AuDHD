@@ -1,0 +1,12 @@
+node_modules/
+dist/
+coverage/
+.env
+.env.*
+.0xff/
+node_modules/
+dist/
+coverage/
+.env
+.env.*
+.0xff/
