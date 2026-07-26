@@ -1,6 +1,6 @@
 import { Command } from 'commander';
 import * as logger from '../utils/logger';
-import { scanRepository, language, framework } from '../../analyzer';
+import { scanRepository, language, framework, dependency } from '../../analyzer';
 
 export function registerThinkCommand(program: Command) {
   program
@@ -82,6 +82,29 @@ export function registerThinkCommand(program: Command) {
         
         console.log('Analysis Time');
         console.log(`${fwResult.analysisTimeMs} ms\n`);
+
+        const depResult = await dependency.analyzeDependencies(result, fwResult);
+        
+        console.log('Dependencies');
+        console.log(`Production: ${depResult.productionDependencies}`);
+        console.log(`Development: ${depResult.developmentDependencies}`);
+        console.log(`Peer: ${depResult.peerDependencies}`);
+        if (depResult.workspaceDependencies > 0) console.log(`Workspace: ${depResult.workspaceDependencies}`);
+        console.log();
+        
+        console.log('Package Manager');
+        console.log(`${depResult.packageManager}\n`);
+        
+        if (depResult.categories.length > 0) {
+          console.log('Dependency Categories');
+          for (const cat of depResult.categories) {
+            console.log(`${cat.category}: ${cat.count}`);
+          }
+          console.log();
+        }
+        
+        console.log('Total Packages');
+        console.log(`${depResult.totalDependencies}\n`);
         
       } catch (error: any) {
         logger.error(`Scan failed: ${error.message}`);
